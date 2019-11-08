@@ -1,6 +1,6 @@
 #!/bin/bash
 PROD_INSTANCE_IDENTIFIER=prod-core-aurora-cluster
-DEV_CLUSTER_IDENTIFIER=dev-core-aurora-cluster
+DEV_CLUSTER_IDENTIFIER=venu-core-aurora-cluster
 DEV_INSTANCE_IDENTIFIER=dev-core-aurora
 DEV_INSTANCE_CLASS=db.r5.large
 SUBNET_GROUP=qa-db-subnet

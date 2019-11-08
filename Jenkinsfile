@@ -11,8 +11,8 @@ pipeline {
         stage('Running shellscript') {
             steps {
                sh '''
-                  chmod +x 
-                  ./
+                  chmod +x dev-db.sh
+                  ./dev-db.sh
                   '''
             }
         }
