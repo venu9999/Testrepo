@@ -115,7 +115,7 @@ aws ssm get-parameter --name skuro_password --with-decryption --region us-east-1
 fail_check
 export USER_PASSWORD=$(grep skuro_password params1 | tail -1 | awk '{print $6}')
 fail_check
-echo "UPDATE mysql.user SET Password=PASSWORD($USER_PASSWORD) WHERE User='skuro'; FLUSH PRIVILEGES;" | mysql -h $HOST_ADDRESS -u skuroot -p$PASSWORD skubana
+echo "UPDATE mysql.user SET Password=PASSWORD('$USER_PASSWORD') WHERE User='skuro'; FLUSH PRIVILEGES;" | mysql -h $HOST_ADDRESS -u skuroot -p$PASSWORD skubana
 
 echo "obscurify prod data and disable all accounts"
 mysql -h $HOST_ADDRESS -u skuroot -p$PASSWORD skubana < scrub_dev_db.sql
